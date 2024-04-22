@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="hchavezT3.Vistas.vLogin"
+             Title="vLogin">
+    
+    <VerticalStackLayout
+    Padding="30.0"
+    Spacing="25">
+
+
+        <Label 
+        Text="Iniciar Sesión"
+        FontFamily="Roboto"
+        HorizontalTextAlignment="Center"
+        FontSize="20"
+        TextColor="Blue">
+        </Label>
+        <Image Source="logouisrael.png" 
+                HeightRequest="100"/>
+
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+
+            </Grid.ColumnDefinitions>
+
+
+            <Label Text="Usuario: "
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   ></Label>
+
+            <Label Text="Contrasena: "
+                     Grid.Row="1"
+                     Grid.Column="0"></Label>
+
+            <Entry x:Name="txtUsuario"
+                    Placeholder="Ingrese su usuario"
+                   MaxLength="7"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2"/>
+
+            <Entry x:Name="txtContrasena"
+                    Placeholder="Ingrese la contraseña"
+                    IsPassword="True"
+                   Grid.Row="1"
+                   Grid.Column="1"/>
+          
+        </Grid>
+
+        <Button x:Name="btninicio"
+                Text="INICIAR SESION"
+                Clicked="btnInicio_Clicked"/>
+        
+    </VerticalStackLayout>
+</ContentPage>
